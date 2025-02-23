@@ -1181,9 +1181,9 @@ _0A3C: // Trainer 4
     trainertextentry   4, TEXT_REMATCH_IN_OVERWORLD, "I was waiting for you. Let’s battle!\r"
 
 _0A4C: // Trainer 383
-    trainertextentry 383, TEXT_NOTICE_IN_OVERWORLD, "That Badge!\rIt’s from Violet City!\nYou beat Falkner?\r"
-    trainertextentry 383, TEXT_DEFEATED_IN_BATTLE, "I know what my weaknesses are.\n"
-    trainertextentry 383, TEXT_DEFEATED_IN_OVERWORLD, "I should train again at the Gym in\nViolet City.\n"
+    trainertextentry 383, TEXT_NOTICE_IN_OVERWORLD, "Ho Ho!\rYou look quite the\nstrong trainer!\rThe name is Route Boss Peter!\rI test other players to see\nif they are ready!\rShow me what you got!\n"
+    trainertextentry 383, TEXT_DEFEATED_IN_BATTLE, "Ho Ho!\rYou're pretty good!\n"
+    trainertextentry 383, TEXT_DEFEATED_IN_OVERWORLD, "Ho Ho!\rMake sure to tell\nmy brother I said Hi!\n"
 
 _0A58: // Trainer 26
     trainertextentry  26, TEXT_NOTICE_IN_OVERWORLD, "That glance...\nIt’s intriguing.\r"

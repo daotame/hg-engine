@@ -345,6 +345,7 @@
 
 
 
+
 #define RANGE_SINGLE_TARGET           0
 #define RANGE_SINGLE_TARGET_SPECIAL   (1 << 0)
 #define RANGE_RANDOM_OPPONENT         (1 << 1)

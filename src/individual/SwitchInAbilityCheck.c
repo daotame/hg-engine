@@ -16,6 +16,7 @@
 
 static BOOL IntimidateCheckHelper(struct BattleStruct *sp, u32 client);
 static BOOL IsValidImposterTarget(void *bw, struct BattleStruct *sp, u32 client);
+static BOOL IckyCheckHelper(struct BattleStruct *sp, u32 client);
 
 extern struct ILLUSION_STRUCT gIllusionStruct;
 
@@ -290,6 +291,20 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                             if (IntimidateCheckHelper(sp, client_no)) {
                                 sp->battlerIdTemp = client_no;
                                 scriptnum = SUB_SEQ_INTIMIDATE;
+                                ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                break;
+                            }
+                        }
+                    }
+
+                    // Icky
+                    {
+                        if ((sp->battlemon[client_no].ability_activated_flag == 0) && (sp->battlemon[client_no].hp) && (GetBattlerAbility(sp, client_no) == ABILITY_ICKY)) {
+                            // mark icky as having activated if it can regardless of if it does so that abilities that suppress it don't suddenly let it activate once they disappear
+                            sp->battlemon[client_no].ability_activated_flag = 1;
+                            if (IckyCheckHelper(sp, client_no)) {
+                                sp->battlerIdTemp = client_no;
+                                scriptnum = SUB_SEQ_ICKY;
                                 ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                 break;
                             }
@@ -948,6 +963,41 @@ static BOOL IntimidateCheckHelper(struct BattleStruct *sp, u32 client)
     }
     return FALSE; // neither opposing battler has an ability that intimidate can activate on
 }
+
+/**
+ *  @brief see if the ability icky should activate depending on the abilities/stat stages it is up against
+ *         assumption is that the client has already been checked for icky's presence; we don't need to here
+ *
+ *  @param sp global battle structure
+ *  @param client battler to check if either opponent has an ability that doesn't negate icky
+ *  @return TRUE if icky can get through either of the opponent's abilities; FALSE otherwise
+ */
+ static BOOL IckyCheckHelper(struct BattleStruct *sp, u32 client)
+ {
+     u32 clientCheck;
+     for (int i = 0; i < 2; i++)
+     {
+         clientCheck = i ? BATTLER_ACROSS(client) : BATTLER_OPPONENT(client);
+         if (sp->battlemon[clientCheck].hp
+          && sp->battlemon[clientCheck].states[STAT_SPATK] > 0)
+         {
+             u32 ability = GetBattlerAbility(sp, clientCheck);
+             switch (ability)
+             {
+                 // should maybe move these to the battle script like clear body
+             case ABILITY_INNER_FOCUS:
+             case ABILITY_SCRAPPY:
+             case ABILITY_OBLIVIOUS:
+             case ABILITY_OWN_TEMPO:
+             case ABILITY_FULL_METAL_BODY:
+                 break;
+             default: // icky can affect at least one opposing battler
+                 return TRUE;
+             }
+         }
+     }
+     return FALSE; // neither opposing battler has an ability that icky can activate on
+ }
 
 /**
  *  @brief see if the ability imposter should activate depending on what it is up against

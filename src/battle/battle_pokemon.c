@@ -82,6 +82,7 @@ u8 TypeEffectivenessTable[][3] =
     { TYPE_GROUND, TYPE_STEEL, 0x14 },
     { TYPE_GROUND, TYPE_FIRE, 0x14 },
     { TYPE_GROUND, TYPE_GRASS, 0x05 },
+    { TYPE_GROUND, TYPE_ICE, 0x05 },
     { TYPE_GROUND, TYPE_ELECTRIC, 0x14 },
     { TYPE_ROCK, TYPE_FIGHTING, 0x05 },
     { TYPE_ROCK, TYPE_FLYING, 0x14 },
@@ -1133,6 +1134,10 @@ u32 LONG_CALL GetAdjustedMoveTypeBasics(struct BattleStruct *sp, u32 move, u32 a
         else if (ability == ABILITY_GALVANIZE)
         {
             typeLocal = TYPE_ELECTRIC;
+        }
+        else if (ability == ABILITY_ACID_COAT)
+        {
+            typeLocal = TYPE_POISON;
         }
         else // needs to be for sure initialized
         {

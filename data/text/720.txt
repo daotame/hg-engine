@@ -33,9 +33,9 @@ Lightning Rod
 Serene Grace
 Swift Swim
 Chlorophyll
-Illuminate
+Icky
 Trace
-Huge Power
+Silk Touch
 Poison Point
 Inner Focus
 Magma Armor
@@ -72,7 +72,7 @@ Drought
 Arena Trap
 Vital Spirit
 White Smoke
-Pure Power
+Acid Coat
 Shell Armor
 Air Lock
 Tangled Feet

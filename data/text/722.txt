@@ -32,10 +32,10 @@ All status problems heal\nwhen it switches out.
 The Pokémon draws in all\nElectric-type moves.
 Boosts the likelihood of\nadded effects appearing.
 Boosts the Pokémon’s\nSpeed in rain.
-Boosts the Pokémon’s\nSpeed in sunshine.
-Raises the likelihood of\nmeeting wild Pokémon.
+Boosts the Pokémon’s\nSpeed in sunshine.s
+Lowers the foe’s\nSpecial Attack stat.
 The Pokémon copies the\nfoe’s ability.
-Raises the Pokémon’s\nAttack stat.
+Contact moves lower the\nfoe’s speed.
 Contact with the Pokémon\nmay poison the foe.
 The Pokémon is protected\nfrom flinching.
 Prevents the Pokémon\nfrom becoming frozen.
@@ -72,7 +72,7 @@ The Pokémon makes it\nsunny if it is in battle.
 Prevents the foe from\nfleeing.
 Prevents the Pokémon\nfrom falling asleep.
 Prevents its stats from\nbeing lowered.
-Boosts the power of\nphysical attacks.
+Normal-type moves become\nPoison-type and powered.
 The Pokémon is protected\nagainst critical hits.
 Eliminates the effects of\nweather.
 Raises evasion if the\nPokémon is confused.

@@ -323,6 +323,24 @@ BOOL MoveHitAttackerAbilityCheck(void *bw, struct BattleStruct *sp, int *seq_no)
                 ret = TRUE;
             }
             break;
+        case ABILITY_SILK_TOUCH:
+            if ((sp->battlemon[sp->defence_client].hp)
+                && (sp->battlemon[sp->attack_client].states[STAT_SPEED] > 0)
+                && ((sp->waza_status_flag & WAZA_STATUS_FLAG_NO_OUT) == 0)
+                && ((sp->server_status_flag & SERVER_STATUS_FLAG_x20) == 0)
+                && ((sp->server_status_flag2 & SERVER_STATUS_FLAG2_U_TURN) == 0)
+                && ((sp->oneSelfFlag[sp->defence_client].physical_damage) ||
+                    (sp->oneSelfFlag[sp->defence_client].special_damage))
+                && (IsContactBeingMade(bw, sp))
+                && (CheckSubstitute(sp, sp->defence_client) == FALSE))
+            {
+                sp->addeffect_param = ADD_STATUS_EFF_BOOST_STATS_SPEED_DOWN;
+                sp->addeffect_type = ADD_EFFECT_PRINT_WORK_ABILITY;
+                sp->state_client = sp->defence_client;
+                sp->battlerIdTemp = sp->attack_client;
+                seq_no[0] = SUB_SEQ_BOOST_STATS;
+                ret = TRUE;
+            }
         case ABILITY_BEAST_BOOST:
             if ((sp->defence_client == sp->fainting_client)
                 && BATTLERS_ON_DIFFERENT_SIDE(sp->attack_client, sp->fainting_client)

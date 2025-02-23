@@ -27,6 +27,12 @@
 .include "armips/asm/tm.s" // make tms infinite
 .include "armips/asm/forget_hm.s" // allows hm to be forgotten
 
+// custom asm scripts
+.include "armips/asm/custom/double_battle_music.s"
+.include "armips/asm/custom/mart_items.s"
+.include "armips/asm/custom/remove_obedience_check.s"
+
+
 .if FAIRY_TYPE_IMPLEMENTED == 1
 
 .include "armips/asm/fairy.s" // repoints all the move table defines within the structure

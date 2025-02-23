@@ -440,6 +440,8 @@
 #define SUB_SEQ_HEAL_TARGET_HP_FULL_FAIL              (430)
 #define SUB_SEQ_USE_WEATHER_MOVE_FAIL                 (431)
 #define SUB_SEQ_FAILED_TO_AFFECT                      (432)
+#define SUB_SEQ_TARGET_ATK_AND_SP_ATTACK_DOWN_1_STAGE (433)
+#define SUB_SEQ_ICKY                                  (434)
 
 
 
@@ -623,6 +625,7 @@
 #define ADD_STATUS_EFF_BOOST_STATS_SP_DEF_DOWN_3       (175)
 #define ADD_STATUS_EFF_BOOST_STATS_ACCURACY_DOWN_3     (176)
 #define ADD_STATUS_EFF_BOOST_STATS_EVASION_DOWN_3      (177)
+#define ADD_STATUS_EFF_ATK_SP_ATTACK_DOWN              (178)
 
 
 

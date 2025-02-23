@@ -1540,3 +1540,6 @@ The opposing {STRVAR_1 1, 0, 0} became cloaked\nin freezing air!
 But it failed to affect\n{STRVAR_1 8, 0, 0}!
 But it failed to affect\nthe wild {STRVAR_1 8, 0, 0}!
 But it failed to affect\nthe opposing {STRVAR_1 8, 0, 0}!
+{STRVAR_1 1, 0, 0} has been\nafflicted by Infestation!
+The wild {STRVAR_1 1, 0, 0} has been\nafflicted by Infestation!
+The opposing {STRVAR_1 1, 0, 0} has been\nafflicted by Infestation!
