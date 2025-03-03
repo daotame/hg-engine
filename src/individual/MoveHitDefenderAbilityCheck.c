@@ -297,14 +297,6 @@ BOOL MoveHitDefenderAbilityCheckInternal(void *bw, struct BattleStruct *sp, int 
                 ret = TRUE;
             }
             break;
-        case ABILITY_COTTON_DOWN:
-            if ((sp->battlemon[sp->attack_client].states[STAT_SPEED] > 0)
-            && ((sp->waza_status_flag & WAZA_STATUS_FLAG_NO_OUT) == 0)
-            && ((sp->server_status_flag & SERVER_STATUS_FLAG_x20) == 0)
-            && ((sp->server_status_flag2 & SERVER_STATUS_FLAG2_U_TURN) == 0)
-            && (IsContactBeingMade(bw, sp))
-            && ((sp->oneSelfFlag[sp->defence_client].physical_damage) ||
-                (sp->oneSelfFlag[sp->defence_client].special_damage)))
         case ABILITY_MUMMY:
         case ABILITY_LINGERING_AROMA:
             if (((sp->waza_status_flag & WAZA_STATUS_FLAG_NO_OUT) == 0)

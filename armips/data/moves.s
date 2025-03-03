@@ -9213,11 +9213,11 @@ movedata MOVE_FORESTS_CURSE, "Forest’s Curse"
 
 movedata MOVE_PETAL_BLIZZARD, "Petal Blizzard"
     battleeffect MOVE_EFFECT_HIT
-    pss SPLIT_PHYSICAL
-    basepower 90
+    pss SPLIT_SPECIAL
+    basepower 100
     type TYPE_GRASS
     accuracy 100
-    pp 15
+    pp 10
     effectchance 0
     target RANGE_ALL_ADJACENT
     priority 0
@@ -13712,7 +13712,7 @@ movedata MOVE_AXE_KICK, "Axe Kick"
     pss SPLIT_PHYSICAL
     basepower 120
     type TYPE_FIGHTING
-    accuracy 90
+    accuracy 95
     pp 10
     effectchance 30
     target RANGE_SINGLE_TARGET
