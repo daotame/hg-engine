@@ -2095,50 +2095,50 @@ surfrate 15
 rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
-superrodrate 75
+superrodrate 100
 walklevels 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5
 
 // morning encounter slots
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_METAPOD
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_METAPOD
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_PARAS
-pokemon SPECIES_PARAS
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_PARAS
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_PARAS
+pokemon SPECIES_SHROOMISH
+pokemon SPECIES_DEERLING
+pokemon SPECIES_ODDISH
+pokemon SPECIES_WEEDLE
+pokemon SPECIES_GOSSIFLEUR
+pokemon SPECIES_PINECO
+pokemon SPECIES_COTTONEE
+pokemon SPECIES_PETILIL
+pokemon SPECIES_BUNEARY
+pokemon SPECIES_CUTIEFLY
+pokemon SPECIES_BUNEARY
+pokemon SPECIES_CUTIEFLY
 
 // day encounter slots
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_METAPOD
-pokemon SPECIES_METAPOD
-pokemon SPECIES_METAPOD
-pokemon SPECIES_METAPOD
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_PARAS
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_PARAS
+pokemon SPECIES_SHROOMISH
+pokemon SPECIES_DEERLING
+pokemon SPECIES_ODDISH
+pokemon SPECIES_WEEDLE
+pokemon SPECIES_GOSSIFLEUR
+pokemon SPECIES_PINECO
+pokemon SPECIES_COTTONEE
+pokemon SPECIES_PETILIL
+pokemon SPECIES_BUNEARY
+pokemon SPECIES_CUTIEFLY
+pokemon SPECIES_BUNEARY
+pokemon SPECIES_CUTIEFLY
 
 // night encounter slots
-pokemon SPECIES_ODDISH
-pokemon SPECIES_ODDISH
-pokemon SPECIES_ODDISH
-pokemon SPECIES_ODDISH
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_PARAS
-pokemon SPECIES_PARAS
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_PARAS
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_PARAS
+pokemon SPECIES_SEEDOT
+pokemon SPECIES_KOMALA
+pokemon SPECIES_FOONGUS
+pokemon SPECIES_VENIPEDE
+pokemon SPECIES_CACNEA
+pokemon SPECIES_DWEBBLE
+pokemon SPECIES_PHANTUMP
+pokemon SPECIES_MIMIKYU
+pokemon SPECIES_DREEPY
+pokemon SPECIES_SPINARAK
+pokemon SPECIES_DREEPY
+pokemon SPECIES_SPINARAK
 
 // hoenn encounter slots
 pokemon SPECIES_SPOINK
@@ -2149,11 +2149,11 @@ pokemon SPECIES_BUDEW
 pokemon SPECIES_CARNIVINE
 
 // surf encounters
-encounter SPECIES_PSYDUCK, 10, 20
-encounter SPECIES_PSYDUCK, 5, 15
-encounter SPECIES_GOLDUCK, 10, 20
-encounter SPECIES_GOLDUCK, 10, 20
-encounter SPECIES_GOLDUCK, 10, 20
+encounter SPECIES_LOTAD, 5, 5
+encounter SPECIES_AZURILL, 5, 5
+encounter SPECIES_FEEBAS, 5, 5
+encounter SPECIES_PHIONE, 5, 5
+encounter SPECIES_PHIONE, 5, 5
 
 // rock smash encounters
 encounter SPECIES_NONE, 0, 0
@@ -2174,11 +2174,11 @@ encounter SPECIES_POLIWAG, 20, 20
 encounter SPECIES_POLIWAG, 20, 20
 
 // super rod encounters
-encounter SPECIES_POLIWAG, 40, 40
-encounter SPECIES_POLIWAG, 40, 40
-encounter SPECIES_MAGIKARP, 40, 40
-encounter SPECIES_POLIWAG, 40, 40
-encounter SPECIES_MAGIKARP, 40, 40
+encounter SPECIES_LOTAD, 5, 5
+encounter SPECIES_AZURILL, 5, 5
+encounter SPECIES_FEEBAS, 5, 5
+encounter SPECIES_PHIONE, 5, 5
+encounter SPECIES_PHIONE, 5, 5
 
 // swarm grass
 pokemon SPECIES_CATERPIE

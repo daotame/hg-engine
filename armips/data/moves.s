@@ -3952,7 +3952,7 @@ movedata MOVE_ANCIENT_POWER, "Ancient Power"
     basepower 60
     type TYPE_ROCK
     accuracy 100
-    pp 5
+    pp 20
     effectchance 100
     target RANGE_SINGLE_TARGET
     priority 0
@@ -14778,6 +14778,22 @@ movedata MOVE_MALIGNANT_CHAIN, "Malignant Chain"
     contesttype CONTEST_COOL
     terminatedata
     movedescription MOVE_MALIGNANT_CHAIN, "---"
+
+movedata MOVE_FLOURISHING_SIPHON, "Flourishing Siphon"
+    battleeffect MOVE_EFFECT_RECOVER_HALF_DAMAGE_DEALT
+    pss SPLIT_SPECIAL
+    basepower 100
+    type TYPE_FAIRY
+    accuracy 100
+    pp 10
+    effectchance 0
+    target RANGE_SINGLE_TARGET
+    priority 0
+    flags FLAG_KEEP_HP_BAR | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KINGS_ROCK
+    appeal 0x00
+    contesttype CONTEST_BEAUTY
+    terminatedata
+    movedescription MOVE_FLOURISHING_SIPHON, "---"
 
 movedatanoname NUM_OF_MOVES
     battleeffect MOVE_EFFECT_HIT

@@ -937,10 +937,13 @@
 .equ MOVE_UPPER_HAND, 921
 .equ MOVE_MALIGNANT_CHAIN, 922
 
+// Custom Moves
+.equ MOVE_FLOURISHING_SIPHON, 923
+
 
 // there are a bunch more here but that is fine
 
-.equ NUM_OF_MOVES, 923
+.equ NUM_OF_MOVES, 924
 
 .equ MOVE_G_MAX_WILDFIRE, (NUM_OF_MOVES-1+1)
 .equ MOVE_G_MAX_BEFUDDLE, (NUM_OF_MOVES-1+2)

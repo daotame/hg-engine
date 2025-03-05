@@ -608,60 +608,43 @@ u16 sMetronomeMimicMoveBanList[] =
  *  @param sp global battle structure
  *  @return not sure.  mostly FALSE except if ending the battle script?
  */
-BOOL BattleScriptCommandHandler(void *bw, struct BattleStruct *sp)
-{
-    BOOL ret;
-    u32 command;
-#ifdef DEBUG_BATTLE_SCRIPT_COMMANDS
-    u8 buf[64];
-#endif //DEBUG_BATTLE_SCRIPT_COMMANDS
-
-    gBattleSystem = bw; // constantly update bw even tho it really only need be done once
-
-    do {
-        command = sp->SkillSeqWork[sp->skill_seq_no];
-
-#ifdef DEBUG_BATTLE_SCRIPT_COMMANDS
-        if (cmdAddress != (u32)&sp->SkillSeqWork[sp->skill_seq_no])
-        {
-            cmdAddress = (u32)&sp->SkillSeqWork[sp->skill_seq_no];
-            sprintf(buf, "[BattleScriptCommandHandler] %s - 0x%02X\n", BattleScrCmdNames[command], command);
-            debugsyscall(buf);
-            if (command == 0xE0 || command == 0x24)
-            {
-                debugsyscall("\n");
-                cmdAddress = 0;
-            }
-            if (command == 0xE) // wait message soft lock?
-            {
-                sp->SkillSeqWork[0] = 0;
-            }
-        }
-        if (command == 0xE) // wait message soft lock?
-        {
-            if (sp->SkillSeqWork[0]++ > 300) // timeout clear queue
-            {
-        //        debugsyscall("[BattleScriptCommandHandler] TIMEOUT: Force Command Increment\n");
-        //        sp->skill_seq_no++;
-        //        sp->SkillSeqWork[0] = 0;
-            }
-        }
-#endif //DEBUG_BATTLE_SCRIPT_COMMANDS
-
-        if (command < START_OF_NEW_BTL_SCR_CMDS)
-        {
-            ret = BattleScriptCmdTable[command](bw, sp);
-        }
-        else
-        {
-            ret = NewBattleScriptCmdTable[command - START_OF_NEW_BTL_SCR_CMDS](bw, sp);
-        }
-    } while ((sp->battle_progress_flag == 0) && ((BattleTypeGet(bw) & BATTLE_TYPE_WIRELESS) == 0));
-
-    sp->battle_progress_flag = 0;
-
-    return ret;
-}
+ BOOL BattleScriptCommandHandler(void *bw, struct BattleStruct *sp)
+ {
+     BOOL ret;
+     u32 command;
+ 
+     gBattleSystem = bw; // constantly update bw even tho it really only need be done once
+ 
+     do {
+         command = sp->SkillSeqWork[sp->skill_seq_no];
+ 
+ #ifdef DEBUG_BATTLE_SCRIPT_COMMANDS
+         if (cmdAddress != (u32)&sp->SkillSeqWork[sp->skill_seq_no])
+         {
+             cmdAddress = (u32)&sp->SkillSeqWork[sp->skill_seq_no];
+             debug_printf("[BattleScriptCommandHandler] %s - 0x%02X\n", BattleScrCmdNames[command], command);
+             if (command == 0xE0 || command == 0x24)
+             {
+                 debug_printf("\n");
+                 cmdAddress = 0;
+             }
+         }
+ #endif //DEBUG_BATTLE_SCRIPT_COMMANDS
+ 
+         if (command < START_OF_NEW_BTL_SCR_CMDS)
+         {
+             ret = BattleScriptCmdTable[command](bw, sp);
+         }
+         else
+         {
+             ret = NewBattleScriptCmdTable[command - START_OF_NEW_BTL_SCR_CMDS](bw, sp);
+         }
+     } while ((sp->battle_progress_flag == 0) && ((BattleTypeGet(bw) & BATTLE_TYPE_WIRELESS) == 0));
+ 
+     sp->battle_progress_flag = 0;
+ 
+     return ret;
+ }
 
 /**
  *  @brief read battle script parameters + increment "program counter" by 1 when doing so

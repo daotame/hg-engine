@@ -414,65 +414,110 @@ trainerdata 11, "Mickey"
     endparty
 
 trainerdata 12, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY  | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET 
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
-    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | 0
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | 0
     battletype SINGLE_BATTLE
     endentry
 
     party 12
         // mon 0
-        ivs 30
-        abilityslot 32
-        level 7
-        pokemon SPECIES_RATTATA
+        ivs 255
+        abilityslot 0
+        level 26
+        pokemon SPECIES_TINKATUFF
+        item ITEM_MUSCLE_BAND
+        move MOVE_SMART_STRIKE
+        move MOVE_SPIRIT_BREAK
+        move MOVE_KNOCK_OFF
+        move MOVE_ROCK_SMASH
+        ability ABILITY_SHEER_FORCE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
-        ivs 30
+        ivs 255
         abilityslot 0
-        level 9
-        pokemon SPECIES_ZUBAT
+        level 26
+        pokemon SPECIES_CUFANT
+        item ITEM_MUSCLE_BAND
+        move MOVE_IRON_HEAD
+        move MOVE_STOMP
+        move MOVE_ROCK_SLIDE
+        move MOVE_ZEN_HEADBUTT
+        ability ABILITY_SHEER_FORCE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_IMPISH
         ballseal 0
 
         // mon 2
-        ivs 30
+        ivs 255
         abilityslot 0
-        level 9
-        pokemon SPECIES_ZUBAT
+        level 28
+        pokemon SPECIES_TURTONATOR
+        item ITEM_QUICK_CLAW
+        move MOVE_FLAME_BURST
+        move MOVE_DRAGON_BREATH
+        move MOVE_SCORCHING_SANDS
+        move MOVE_SELF_DESTRUCT
+        ability ABILITY_SHELL_ARMOR
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_SERIOUS
         ballseal 0
     endparty
 
-trainerdata 13, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+trainerdata 13, "Rachel"
+    trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY  | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET 
     trainerclass TRAINERCLASS_TEAM_ROCKET_F
     nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
-    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | 0
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | 0
     battletype SINGLE_BATTLE
     endentry
 
     party 13
         // mon 0
-        ivs 30
+        ivs 255
         abilityslot 0
-        level 9
-        pokemon SPECIES_ZUBAT
+        level 28
+        pokemon SPECIES_LAIRON
+        item ITEM_CUSTAP_BERRY
+        move MOVE_DRAGON_CLAW
+        move MOVE_IRON_HEAD
+        move MOVE_BODY_PRESS
+        move MOVE_EXPLOSION
+        ability ABILITY_STURDY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_IMPISH
         ballseal 0
 
         // mon 1
-        ivs 30
+        ivs 255
         abilityslot 0
-        level 11
-        pokemon SPECIES_EKANS
+        level 28
+        pokemon SPECIES_GRAPPLOCT
+        item ITEM_LEFTOVERS
+        move MOVE_JET_PUNCH
+        move MOVE_MACH_PUNCH
+        move MOVE_WRAP
+        move MOVE_RECOVER
+        ability ABILITY_TECHNICIAN
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
     endparty
 
@@ -2663,37 +2708,64 @@ trainerdata 66, "Todd"
     endparty
 
 trainerdata 67, "Benny"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY  | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET
     trainerclass TRAINERCLASS_BUG_CATCHER
     nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
-    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | 0
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | 0
     battletype SINGLE_BATTLE
     endentry
 
     party 67
         // mon 0
-        ivs 10
+        ivs 255
         abilityslot 0
-        level 7
-        pokemon SPECIES_WEEDLE
+        level 26
+        pokemon SPECIES_WORMADAM
+        item ITEM_SITRUS_BERRY
+        move MOVE_BUG_BUZZ
+        move MOVE_GIGA_DRAIN
+        move MOVE_ELECTROWEB
+        move MOVE_QUIVER_DANCE
+        ability ABILITY_HARVEST
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_BOLD
         ballseal 0
 
         // mon 1
-        ivs 10
+        ivs 255
         abilityslot 0
-        level 9
-        pokemon SPECIES_KAKUNA
+        level 28
+        pokemon SPECIES_BEEDRILL
+        item ITEM_POISON_BARB
+        move MOVE_SKITTER_SMACK
+        move MOVE_POISON_JAB
+        move MOVE_ASSURANCE
+        move MOVE_FOCUS_ENERGY
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 2
-        ivs 10
+        ivs 255
         abilityslot 0
-        level 12
-        pokemon SPECIES_BEEDRILL
+        level 28
+        pokemon SPECIES_ANORITH
+        item ITEM_FOCUS_SASH
+        move MOVE_ROCK_SLIDE
+        move MOVE_X_SCISSOR
+        move MOVE_AERIAL_ACE
+        move MOVE_AQUA_CUTTER
+        ability ABILITY_SWIFT_SWIM
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
     endparty
 
@@ -16995,9 +17067,9 @@ trainerdata 485, "Archer"
     endparty
 
 trainerdata 486, "Proton"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY  | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET 
     trainerclass TRAINERCLASS_EXECUTIVE_PROTON
-    nummons 2
+    nummons 5
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -17008,17 +17080,83 @@ trainerdata 486, "Proton"
 
     party 486
         // mon 0
-        ivs 100
+        ivs 255
         abilityslot 0
-        level 8
-        pokemon SPECIES_ZUBAT
+        level 26
+        monwithform SPECIES_VOLTORB, 1
+        item ITEM_FOCUS_BAND
+        move MOVE_DISCHARGE
+        move MOVE_GIGA_DRAIN
+        move MOVE_LEECH_SEED
+        move MOVE_SELF_DESTRUCT
+        ability ABILITY_COMPETITIVE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 1
-        ivs 100
+        ivs 255
         abilityslot 0
-        level 12
-        pokemon SPECIES_KOFFING
+        level 26
+        pokemon SPECIES_PANGORO
+        item ITEM_QUICK_CLAW
+        move MOVE_DRAIN_PUNCH
+        move MOVE_BULLET_PUNCH
+        move MOVE_FIRE_PUNCH
+        move MOVE_ICE_PUNCH
+        ability ABILITY_IRON_FIST
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+
+        // mon 2
+        ivs 255
+        abilityslot 0
+        level 28
+        pokemon SPECIES_GOLBAT
+        item ITEM_LUM_BERRY
+        move MOVE_POISON_JAB
+        move MOVE_DUAL_WINGBEAT
+        move MOVE_U_TURN
+        move MOVE_CONFUSE_RAY
+        ability ABILITY_INNER_FOCUS
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_JOLLY
+        ballseal 0
+
+        // mon 3
+        ivs 255
+        abilityslot 0
+        level 28
+        monwithform SPECIES_LYCANROC, 1
+        item ITEM_SCOPE_LENS
+        move MOVE_NIGHT_SLASH
+        move MOVE_ROCK_SLIDE
+        move MOVE_CROSS_CHOP
+        move MOVE_FIRST_IMPRESSION
+        ability ABILITY_SNIPER
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_JOLLY
+        ballseal 0
+
+        // mon 4
+        ivs 255
+        abilityslot 0
+        level 28
+        pokemon SPECIES_DRAKLOAK
+        item ITEM_WISE_GLASSES
+        move MOVE_SHADOW_BALL
+        move MOVE_DRAGON_PULSE
+        move MOVE_FLAMETHROWER
+        move MOVE_U_TURN
+        ability ABILITY_CLEAR_BODY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_MODEST
         ballseal 0
     endparty
 
